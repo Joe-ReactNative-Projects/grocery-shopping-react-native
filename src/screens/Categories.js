@@ -11,7 +11,7 @@ import {
 import EmptyDark from "./../../assets/EmptyDark.png";
 import {AntDesign} from "@expo/vector-icons";
 
-export default function Home() {
+export default function Categories() {
 	return (
 		<View className="flex-1 lightblue">
 			<StatusBar style="light" />
@@ -23,19 +23,9 @@ export default function Home() {
 				<Text className="text-greyb5 font-semibold text-[22px] mb-6">
 					Hey, Halal
 				</Text>
-				<TouchableOpacity className="rounded-full py-5 px-5 bg-darkblue flex-row mb-6">
-					<View className="mr-4">
-						<AntDesign name="search1" size={24} color="#F8F9FB" />
-					</View>
 
-					<TextInput
-						placeholder="Search products or store"
-						placeholderTextColor="#8891A5"
-						className="text-[14px]"
-						// value={email}
-						// onChangeText={(text) => setEmail(text)}
-					/>
-				</TouchableOpacity>
+				<Text className="mb-8 text-[30px] text-greyb text-left">Shop</Text>
+				<Text>By Category</Text>
 
 				{/* Two drop downs */}
 				<View className="flex-row justify-between mb-3">
