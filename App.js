@@ -1,8 +1,6 @@
 import {StatusBar} from "expo-status-bar";
 import {SafeAreaView, Text, View} from "react-native";
 
-import tw from "twrnc";
-
 export default function App() {
 	return (
 		<View className="flex-1 items-center justify-center bg-black">
