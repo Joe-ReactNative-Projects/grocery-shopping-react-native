@@ -8,11 +8,11 @@ export const categories = [
 		title: "Vegetables",
 	},
 	{
-		id: "1",
+		id: "3",
 		title: "Fruits",
 	},
 	{
-		id: "1",
+		id: "4",
 		title: "Cereals",
 	},
 ];

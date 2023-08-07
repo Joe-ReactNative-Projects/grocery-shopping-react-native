@@ -1,4 +1,6 @@
 import {StatusBar} from "expo-status-bar";
+import {useState} from "react";
+import React from "react";
 import {
 	SafeAreaView,
 	TextInput,
@@ -6,7 +8,7 @@ import {
 	Image,
 	Button,
 	ScrollView,
-	Flatlist,
+	FlatList,
 	Text,
 	View,
 } from "react-native";
@@ -15,7 +17,15 @@ import {AntDesign} from "@expo/vector-icons";
 import {DATA} from "./../data/FoodCategory";
 import {categories} from "./../data/FoodCategory";
 
+const Item = ({title}) => (
+	<View>
+		<Text>{title}</Text>
+	</View>
+);
+
 export default function Categories() {
+	const [activeCategory, setActiveCategory] = useState(2);
+
 	return (
 		<View className="flex-1 lightblue">
 			<StatusBar style="light" />
@@ -46,35 +56,37 @@ export default function Categories() {
 
 			<ScrollView className="flex-1">
 				<View className="bg-white px-5">
-					{/* Top part */}
-
-					{/* Recommended section */}
-
-					<Text className="mb-8 text-[30px] text-greyb text-left">
-						Recommended
-					</Text>
-
 					{/* Categories */}
 
-					<View>
-						<Flatlist
+					<View className="mt-5">
+						<FlatList
 							horizontal
 							showsHorizontalScrollIndicator={false}
 							data={categories}
-							keyExtractor={(item) => item.id}
 							className="overflow-visible"
 							renderItem={({item}) => {
+								let isActive = item.id == activeCategory;
+								let textColor = isActive ? "#FAFBFD" : "#616A7D";
+
 								return (
-									<TouchableOpacity>
-										<Text>{item.title}</Text>
+									<TouchableOpacity
+										onPress={() => setActiveCategory(item.id)}
+										style={{
+											backgroundColor: isActive ? "#F9B023" : "#fff00000",
+										}}
+										className="p-4 px-5 rounded-full mr-2 border border-[#B2BBCE] shadow ">
+										<Text className="font-semibold" style={{color: textColor}}>
+											{item.title}
+										</Text>
 									</TouchableOpacity>
 								);
 							}}
+							keyExtractor={(item) => item.id}
 						/>
 					</View>
 				</View>
 
-				<View className="px-5 mt-12">
+				<View className="px-5 mt-7">
 					<View className="flex-col gap-y-7">
 						{DATA.map((DATA, index) => {
 							const isEvenItem = index % 2 === 0;

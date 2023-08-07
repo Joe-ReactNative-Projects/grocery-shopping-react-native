@@ -91,7 +91,7 @@ const AppNavigation = () => {
 						let iconName;
 						let iconColor;
 
-						if (route.name === "Home") {
+						if (route.name === "Main") {
 							iconName = focused ? "home" : "home-outline";
 						} else if (route.name === "Categories") {
 							iconName = focused ? "apps" : "apps-outline";
@@ -138,7 +138,7 @@ const AppNavigation = () => {
 					},
 				})}>
 				<Tab.Screen
-					name="Home"
+					name="Main"
 					component={Home}
 					options={{
 						tabBarLabel: "Home",
