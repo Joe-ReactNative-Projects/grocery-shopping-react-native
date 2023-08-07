@@ -21,7 +21,11 @@ module.exports = {
 			// white: "#fff",
 			black: "#000",
 		},
-		extend: {},
+		extend: {
+			fontFamily: {
+				manrope: ["Manrope", "sans-serif"],
+			},
+		},
 	},
 	plugins: [],
 };

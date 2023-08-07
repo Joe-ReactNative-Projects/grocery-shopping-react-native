@@ -9,12 +9,12 @@ import {
 	View,
 } from "react-native";
 
-export default function Favourites() {
+export default function More() {
 	return (
 		<View className="flex-1 justify-center items-center">
 			<StatusBar style="dark" />
 
-			<Text className="text-2xl">This is the Favourites page</Text>
+			<Text className="text-2xl">This is the More page</Text>
 		</View>
 	);
 }

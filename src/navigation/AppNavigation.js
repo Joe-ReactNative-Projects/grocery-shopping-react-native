@@ -11,6 +11,8 @@ import Home from "../screens/Home";
 import Onboardv1 from "../screens/Onboardv1";
 import Onboardv2 from "../screens/Onboardv2";
 import Categories from "../screens/Categories";
+import Favourites from "../screens/Favourites";
+import More from "../screens/More";
 
 import AppLoading from "expo-app-loading";
 
@@ -44,7 +46,7 @@ const AppNavigation = () => {
 
 	return (
 		<NavigationContainer>
-			<Stack.Navigator>
+			<Stack.Navigator initialRouteName="Onboardv1">
 				<Stack.Screen
 					name="Onboardv1"
 					component={Onboardv1}
@@ -151,14 +153,14 @@ const AppNavigation = () => {
 				/>
 				<Tab.Screen
 					name="Favourites"
-					component={Categories}
+					component={Favourites}
 					options={{
 						tabBarLabel: "Favourite",
 					}}
 				/>
 				<Tab.Screen
 					name="More"
-					component={Categories}
+					component={More}
 					options={{
 						tabBarLabel: "More",
 					}}
