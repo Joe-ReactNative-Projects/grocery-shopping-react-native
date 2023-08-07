@@ -46,17 +46,17 @@ const AppNavigation = () => {
 
 	return (
 		<NavigationContainer>
-			<Stack.Navigator initialRouteName="Onboardv1">
-				<Stack.Screen
+			<Stack.Navigator initialRouteName="Categories">
+				{/* <Stack.Screen
 					name="Onboardv1"
 					component={Onboardv1}
 					options={{headerShown: false}}
-				/>
-				<Stack.Screen
+				/> */}
+				{/* <Stack.Screen
 					name="Onboardv2"
 					component={Onboardv2}
 					options={{headerShown: false}}
-				/>
+				/> */}
 				<Stack.Screen
 					name="Home"
 					component={HomeTabs}

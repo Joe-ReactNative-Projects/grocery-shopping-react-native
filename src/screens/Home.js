@@ -33,6 +33,8 @@ export default function Home() {
 						<AntDesign name="shoppingcart" size={24} color="white" />
 					</TouchableOpacity>
 				</View>
+
+				{/* Search bar */}
 				<TouchableOpacity className="rounded-full py-5 px-5 bg-darkblue flex-row mb-6">
 					<View className="mr-4">
 						<AntDesign name="search1" size={24} color="#F8F9FB" />
