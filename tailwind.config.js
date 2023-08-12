@@ -24,6 +24,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				manrope: ["Manrope", "sans-serif"],
+				// roboto: ["Roboto", "sans-serif"],
 			},
 		},
 	},

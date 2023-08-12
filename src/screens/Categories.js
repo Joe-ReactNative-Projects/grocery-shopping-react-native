@@ -16,15 +16,18 @@ import EmptyDark from "./../../assets/EmptyDark.png";
 import {AntDesign} from "@expo/vector-icons";
 import {DATA} from "./../data/FoodCategory";
 import {categories} from "./../data/FoodCategory";
+import {useNavigation} from "@react-navigation/native";
 
-const Item = ({title}) => (
+const item = ({title}) => (
 	<View>
 		<Text>{title}</Text>
 	</View>
 );
 
 export default function Categories() {
-	const [activeCategory, setActiveCategory] = useState(2);
+	const [activeCategory, setActiveCategory] = useState(1);
+
+	const navigation = useNavigation();
 
 	return (
 		<View className="flex-1 lightblue">
@@ -102,12 +105,16 @@ export default function Categories() {
 									{/* Text */}
 									<View className="flex-1 py-7 justify-between ">
 										<View>
-											<Text className="text-[18px] mb-2 font-bold text-greyb">
-												{DATA.title}
-											</Text>
-											<Text className="text-[16px] font-normal text-greyb2">
-												{DATA.subtitle}
-											</Text>
+											<TouchableOpacity
+												onPress={() => navigation.navigate("CategoryList")}>
+												<Text className="text-[18px] mb-2 font-bold text-greyb">
+													{DATA.title}
+												</Text>
+
+												<Text className="text-[16px] font-normal text-greyb2">
+													{DATA.subtitle}
+												</Text>
+											</TouchableOpacity>
 										</View>
 
 										<View>
