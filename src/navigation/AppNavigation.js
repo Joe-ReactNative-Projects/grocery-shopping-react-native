@@ -14,6 +14,7 @@ import Categories from "../screens/Categories";
 import Favourites from "../screens/Favourites";
 import CategoryList from "../screens/CategoryList";
 import More from "../screens/More";
+import ProductScreen from "../screens/ProductScreen";
 
 import AppLoading from "expo-app-loading";
 
@@ -66,6 +67,11 @@ const AppNavigation = () => {
 				<Stack.Screen
 					name="CategoryList"
 					component={CategoryList}
+					options={{headerShown: false}}
+				/>
+				<Stack.Screen
+					name="ProductScreen"
+					component={ProductScreen}
 					options={{headerShown: false}}
 				/>
 			</Stack.Navigator>
